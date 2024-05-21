@@ -374,4 +374,14 @@ const bills = [
 ];
 
 // Start coding here
-const totalMembers;
+const totalMembers = bills
+  .filter((item) => item.member !== null)
+  .map((item) => item.member.name);
+
+const result = function (totalMembers) {
+  return totalMembers.filter(
+    (item, index) => totalMembers.indexOf(item) === index
+  );
+};
+
+console.log(result);
