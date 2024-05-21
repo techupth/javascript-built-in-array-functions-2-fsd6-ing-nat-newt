@@ -374,4 +374,12 @@ const bills = [
 ];
 
 // Start coding here
-const billMembers;
+let getMemberName = (obj) => obj.member.name;
+let getMemberProp = (bill) => bill.member;
+let getMemberObjArr = (bills) => bills.filter(getMemberProp);
+
+let memberObjectArr = getMemberObjArr(bills);
+
+const billMembers = memberObjectArr.map(getMemberName);
+
+console.log(billMembers);
