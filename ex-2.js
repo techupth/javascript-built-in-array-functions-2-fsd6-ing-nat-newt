@@ -374,5 +374,9 @@ const bills = [
 ];
 
 // Start coding here
+let getMemberProp = (bill) => bill.member;
+let getMemberObjArr = (bills) => bills.filter(getMemberProp);
 
-const newBills;
+const newBills = getMemberObjArr(bills);
+
+console.log(newBills);

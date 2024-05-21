@@ -374,3 +374,12 @@ const bills = [
 ];
 
 // Start coding here
+let getTotal = (bill) => bill.total;
+let getTotalArr = (bills) => bills.map(getTotal);
+let sum = (accumulator, currentValue) => accumulator + currentValue;
+let printReportSumBillsTotal = (sum) =>
+  console.log("Total bill transaction is " + sum);
+
+let billsTotalArr = getTotalArr(bills);
+let sumBillsTotal = billsTotalArr.reduce(sum, 0);
+printReportSumBillsTotal(sumBillsTotal);
