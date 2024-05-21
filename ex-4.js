@@ -373,5 +373,15 @@ const bills = [
   },
 ];
 
-// Start coding here
-const totalMembers;
+// Start coding her
+let getMemberName = (obj) => obj.member.name;
+let getMemberProp = (bill) => bill.member;
+let getMemberObjArr = (bills) => bills.filter(getMemberProp);
+
+let memberObjectArr = getMemberObjArr(bills);
+let membersNameArr = memberObjectArr.map(getMemberName);
+
+let totalMember = (arr) =>
+  arr.filter((member, index) => arr.indexOf(member) === index);
+
+console.log("Unique Members Count: " + totalMember(membersNameArr).length);
